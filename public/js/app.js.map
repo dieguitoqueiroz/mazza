@@ -1,0 +1,1 @@
+{"version":3,"sources":["defaults.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"app.js","sourcesContent":["require(['jquery'], function ($) {\n\n    main = {\n\n        initialize: function () {\n            console.log('testewwwww');\n        }\n    };\n    main.initialize();\n    return main;\n});"]}

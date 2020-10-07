@@ -1,0 +1,23 @@
+.nav-wrapper {
+  background-color: $main-nav-bg;
+
+  ul {
+    li {
+      a {
+        color: $white;
+        opacity: .7;
+
+        &:hover {
+          background-color: transparent;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    float: none;
+    margin-top: 20px;
+    display: block;
+  }
+}
