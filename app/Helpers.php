@@ -13,12 +13,15 @@ class Helpers
         return $ano."-".$mes."-".$dia;
     }
 
-    public function formatDateToDisplay($date) {
+    public function formatDateToDisplay($date, $show_hour = false) {
         if(empty($date))
             return;
 
         $date = date_create($date);
-        return date_format($date, "d/m/Y");
+        if(!$show_hour)
+            return date_format($date, "d/m/Y");
+        else
+            return date_format($date, "d/m/Y H:i");
     }
 
     public function formatCPF($cpf)

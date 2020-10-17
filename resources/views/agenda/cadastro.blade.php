@@ -16,8 +16,8 @@
 @endphp
 
 @section('content')
-    <div class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-calendar"></span> Agenda</div>
+    <div class="page-header">
+        <h2 class="text-primary"><span class="glyphicon glyphicon-calendar"></span> Agenda</h2>
     </div>
     <div class="col-md-5">
         <form action="{{ url("/agenda/$action") }}" method="post">

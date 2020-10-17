@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -36,7 +37,8 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
+//        $this->middleware('guest');
     }
 
     /**
@@ -65,6 +67,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'active' => isset($data['active']) ? 1 : 0,
+            'can_create_user' => isset($data['can_create_user']) ? 1 : 0,
             'password' => bcrypt($data['password']),
         ]);
     }

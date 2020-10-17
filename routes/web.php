@@ -12,12 +12,12 @@
 */
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/', 'DashboardController@index');
     Route::match(['get', 'post'], '/medicos/{action?}/{id?}', 'MedicosController@index')->middleware('pacientes');
     Route::match(['get', 'post'], '/agenda/{action?}/{id?}', 'AgendaController@index')->middleware('agenda');;
     Route::match(['get', 'post'], '/pacientes/{action?}/{id?}', 'PacientesController@index')->middleware('pacientes');
+    Route::match(['get', 'post'], '/users/{action?}/{id?}', 'UsersController@index');
 });
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');

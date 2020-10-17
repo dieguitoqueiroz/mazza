@@ -1,0 +1,19 @@
+.login-wrapper {
+  background: url("../imgs/doctor.jpg") no-repeat center center ;
+  background-size: 100%;
+
+  .login-holder {
+    width: 35%;
+    max-width: 600px;
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 10px;
+  }
+}

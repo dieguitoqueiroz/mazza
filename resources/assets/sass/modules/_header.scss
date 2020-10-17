@@ -1,0 +1,42 @@
+.navbar-default {
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+  color: $white;
+  float: left;
+  display: none;
+
+}
+
+.logo {
+  width: 130px;
+}
+
+.hamburger {
+  float: left;
+  outline: none;
+}
+
+.ham-brand-holder {
+  background-color: $main-nav-bg;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@include breakpoint(tablet) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar-brand {
+    display: inline;
+  }
+}
+

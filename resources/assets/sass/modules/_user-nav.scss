@@ -1,0 +1,37 @@
+.user-nav {
+  margin-right: 5px;
+  float: right;
+
+  li {
+    a {
+      color: $limed-spruce;
+    }
+  }
+
+  .dropdown {
+    .avatar, .dropdown-toggle {
+      display: inline;
+    }
+
+    .dropdown-menu {
+      border: 0;
+      box-shadow: none;
+      background-color: $white;
+    }
+
+    a {
+      &:hover, &:active, &:visited, &:focus {
+        background: $white;
+      }
+    }
+
+    .dropdown-toggle {
+      padding-left: 3px;
+    }
+
+    .avatar {
+      width: 40px;
+      padding-top: 3px;
+    }
+  }
+}

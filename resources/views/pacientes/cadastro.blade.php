@@ -11,8 +11,8 @@ $isset_paciente = isset($paciente);
 @endphp
 
 @section('content')
-    <div class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> Pacientes</div>
+    <div class="page-header">
+        <h2 class="text-primary"><span class="glyphicon glyphicon-user"></span> Pacientes</h2>
     </div>
     <div class="col-md-5">
         @if (count($errors) > 0)

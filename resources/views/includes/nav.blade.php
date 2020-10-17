@@ -1,11 +1,6 @@
-<div class="col-md-2 full-height nav-wrapper">
+<div class="col-md-12 nav-holder">
     <!-- Branding Image -->
-    <div>
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a>
-    </div>
-    <nav id="main-nav" class="navbar-collapse collapse in">
+    <nav id="main-nav" class="main-nav">
         <ul class="nav nav-sidebar">
             <li><a href="/"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
             <li><a href="{{ url('/medicos/listar') }}"><span class="glyphicon glyphicon-plus"></span> Médicos</a></li>

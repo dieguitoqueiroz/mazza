@@ -1,6 +1,15 @@
-.nav-wrapper {
+.nav-holder {
   background-color: $main-nav-bg;
+  min-height: 100vh;
+  min-width: 260px;
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+}
 
+.main-nav {
+  padding: 0;
   ul {
     li {
       a {
@@ -14,10 +23,13 @@
       }
     }
   }
+}
 
-  .navbar-brand {
-    float: none;
-    margin-top: 20px;
+@include breakpoint(tablet) {
+
+  .nav-holder {
     display: block;
+    position: relative;
+    top: 0;
   }
 }

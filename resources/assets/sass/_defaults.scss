@@ -2,3 +2,65 @@ body, html, .main-wrapper, .full-height {
   min-height: 100%;
   height: 100%;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.navigation {
+  width: 90px;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.content-page {
+  padding: 70px 12px;
+  min-height: 100vh;
+  background-color: $content-bg;
+
+  .navbar-custom {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 90px;
+    min-height: 50px;
+    height: 56px;
+    overflow: visible;
+    background-color: $white;
+  }
+}
+
+.modal {
+  z-index: 9999;
+}
+
+.dataTable {
+  width: 100% !important  ;
+}
+
+@include breakpoint(tablet) {
+  .navigation {
+    width: 260px;
+  }
+  .content-page {
+    margin-left: 260px;
+
+    .navbar-custom {
+      left: 260px;
+    }
+  }
+}
+

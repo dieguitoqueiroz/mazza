@@ -30,8 +30,11 @@ class PacientesController extends Controller
             return $this->{$action}($action, $id);
     }
 
-    private function listar()
+    private function listar($action, $id)
     {
+        if(!empty($id)) {
+            return $this->pacientes::find($id);
+        }
         return view('pacientes.lista', [
             'pacientes' => $this->pacientes::all(),
             'helper' => $this->helpers,

@@ -48,6 +48,21 @@ class AgendaController extends Controller
         ]);
     }
 
+    private function consultas()
+    {
+        $id_medico = $this->Request->input('id_medico');
+        $consultas = $this->agenda->getSchedules($id_medico);
+        $data = [];
+
+        foreach ($consultas as $key => $consulta) {
+            $data[$key]['title'] = $consulta->nome_paciente;
+            $data[$key]['start'] = $consulta->data . ' ' . $consulta->hora_inicio;
+            $data[$key]['color'] = $consulta->color;
+        }
+        $data = json_encode($data);
+        return $data;
+    }
+
     private function editar($action, $id)
     {
         if($this->Request->isMethod('post')) {

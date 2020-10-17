@@ -12,8 +12,8 @@ $isset_medico = isset($medico);
 @endphp
 
 @section('content')
-    <div class="panel panel-default">
-        <div class="panel-heading"><span class="glyphicon glyphicon-plus"></span> Médicos</div>
+    <div class="page-header">
+        <h2 class="text-primary"><span class="glyphicon glyphicon-plus"></span> Médicos</h2>
     </div>
     <div class="col-md-5">
         @if (count($errors) > 0)
@@ -33,7 +33,7 @@ $isset_medico = isset($medico);
                 <div class="col-md-8">
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" placeholder="Nome" aria-describedby="basic-addon1" name="nome" value="@if($isset_medico) {{$medico['nome']}} @endif">
+                        <input type="text" class="form-control" placeholder="Nome" aria-describedby="basic-addon1" name="nome" value="@if($isset_medico) {{$medico['nome']}} @endif" required>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@ $isset_medico = isset($medico);
                 <div class="col-md-8">
                     <div class="form-group">
                         <label for="nome">Especialidade</label>
-                        <select type="text" class="form-control" placeholder="Especialidade" aria-describedby="basic-addon1" name="especialidade">
+                        <select type="text" class="form-control" placeholder="Especialidade" aria-describedby="basic-addon1" name="especialidade" required>
                             <option value="">Especialidade</option>
                             @foreach ($especialidades as $especialidade)
 
@@ -59,13 +59,23 @@ $isset_medico = isset($medico);
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="nome">CPF</label>
-                        <input type="text" class="form-control cpf" placeholder="CPF" aria-describedby="basic-addon1" name="cpf" value="@if($isset_medico) {{$medico['cpf']}} @endif">
+                        <input type="text" class="form-control cpf" placeholder="CPF" aria-describedby="basic-addon1" name="cpf" value="@if($isset_medico) {{$medico['cpf']}} @endif" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="nome">CRM</label>
-                        <input type="text" class="form-control crm" placeholder="CRM" aria-describedby="basic-addon1" name="crm" value="@if($isset_medico) {{$medico['cpf']}} @endif">
+                        <label for="nome">CRM <button type="button" class="tooltip-holder" data-toggle="tooltip" data-placement="right" title=" Registro que o médico deve possuir após obter o diploma">i</button>
+                        </label>
+                        <input type="text" class="form-control crm" placeholder="CRM" aria-describedby="basic-addon1" name="crm" value="@if($isset_medico) {{$medico['cpf']}} @endif" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nome">Cor <button type="button" class="tooltip-holder" data-toggle="tooltip" data-placement="right" title="Utilizado para distinguir eventos de agenda">i</button>
+                        </label>
+                        <input type="color" class="form-control crm" placeholder="Cor" name="color">
                     </div>
                 </div>
             </div>

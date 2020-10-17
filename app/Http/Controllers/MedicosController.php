@@ -33,6 +33,12 @@ class MedicosController extends Controller
 
    private function listar()
    {
+       $request_uri = $this->Request->getRequestUri();
+       $is_api_request = strpos($request_uri, 'api');
+
+       if($is_api_request)
+           return response()->json($this->medico::all());
+
        return view('medicos.lista', [
            'medicos' => $this->medico::all(),
            'especialidades' => $this->especialidades
@@ -53,6 +59,7 @@ class MedicosController extends Controller
            $medico->especialidade = $this->Request['especialidade'];
            $medico->cpf = $this->Request['cpf'];
            $medico->crm = $this->Request['crm'];
+           $medico->color = $this->Request['color'];
            try {
                $medico->save();
                return redirect('medicos/listar');
@@ -79,6 +86,7 @@ class MedicosController extends Controller
                $medico::where('id', $this->Request->id)->update([
                    'nome' => $this->Request['nome'],
                    'especialidade' => $this->Request['especialidade'],
+                   'color' => $this->Request['color'],
                ]);
                return redirect('medicos/listar');
            }catch (\Exception $e) {
