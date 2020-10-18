@@ -8815,6 +8815,16 @@ button {
   padding: 15px;
 }
 
+table .btn-det-paciente {
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+}
+
+table tr td {
+  position: relative;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #ececec;
 }
