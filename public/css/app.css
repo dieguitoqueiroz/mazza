@@ -8651,7 +8651,6 @@ button {
 
 .navigation {
   width: 90px;
-  min-height: 100vh;
   position: fixed;
   z-index: 9999;
   top: 0;
@@ -8687,6 +8686,7 @@ button {
 @media (min-width: 768px) {
   .navigation {
     width: 260px;
+    min-height: 100vh;
   }
   .content-page {
     margin-left: 260px;
@@ -8817,7 +8817,7 @@ button {
 
 .login-wrapper {
   background: url("../imgs/doctor.jpg") no-repeat center center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .login-wrapper .login-holder {
