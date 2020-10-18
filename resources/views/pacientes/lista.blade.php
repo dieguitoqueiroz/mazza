@@ -15,22 +15,21 @@
         <a href="{{ url('/pacientes/cadastrar') }}" type="button" class="btn btn-raised btn-success"><span class="glyphicon glyphicon-plus"></span> Cadastrar</a>
     </div>
     <br><br>
-    <table id="pacientes-table" class="table table-striped table-bordered datatable responsive">
+    <table id="pacientes-table" class="table table-striped table-bordered datatable responsive no-dtr-control">
         <thead>
         <tr>
-            <th>#</th>
             <th>Cod.</th>
             <th>Nome</th>
             <th>CPF</th>
             <th>Celular</th>
             <th>Data Nasc</th>
             <th>Ações</th>
+            <th data-priority="1">#</th>
         </tr>
         </thead>
         <tbody>
         @foreach ($pacientes as $paciente)
             <tr>
-                <td><a class="btn-det-paciente" href="#" data-idpaciente="{{$paciente->id}}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
                 <td>{{$paciente->id}}</td>
                 <td>{{$paciente->nome}}</td>
                 <td>{{$paciente->cpf}}</td>
@@ -48,6 +47,7 @@
                         </ul>
                     </div>
                 </td>
+                <td ><a class="btn-det-paciente" href="#" data-idpaciente="{{$paciente->id}}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
             </tr>
         @endforeach
         </tbody>
