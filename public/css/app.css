@@ -8815,6 +8815,14 @@ button {
   padding: 15px;
 }
 
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #ececec;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
 .login-wrapper {
   background: url("../imgs/doctor.jpg") no-repeat center center;
   background-size: cover;
