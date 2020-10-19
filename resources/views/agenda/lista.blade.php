@@ -32,7 +32,7 @@
                     <span>Selecione o médico para mostrar eventos específicos</span>
                     <br><br>
                     <div class="dropdown">
-                        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="dLabel" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Médicos
                             <span class="caret"></span>
                         </button>
